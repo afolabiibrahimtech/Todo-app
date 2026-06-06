@@ -42,7 +42,8 @@ h1 {
 
 .add-task {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;           
+  gap: 10px;
   margin-bottom: 25px;
 }
 
@@ -146,4 +147,17 @@ h1 {
 #taskList li.overdue {
   border-left: 5px solid #ef4444;
   background: #431c1c;
+}
+@media (max-width: 600px) {
+  .add-task {
+    flex-direction: column;
+  }
+  
+  #taskInput, #dueDate {
+    width: 100%;
+  }
+  
+  #addBtn {
+    width: 100%;
+  }
 }
