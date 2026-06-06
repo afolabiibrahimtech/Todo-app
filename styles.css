@@ -1,0 +1,149 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #111827;
+  color: white;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 640px;
+  background: #1e2937;
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.add-task {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+#taskInput, #dueDate, .search-bar {
+  flex: 1;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #334155;
+  color: white;
+  font-size: 1.05rem;
+}
+
+#addBtn {
+  padding: 15px 32px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 8px 20px;
+  background: #334155;
+  border: none;
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filters button.active {
+  background: #0ea5e9;
+  font-weight: 600;
+}
+
+#taskList {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+#taskList li {
+  background: #334155;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+  gap: 12px;
+}
+
+#taskList li.completed {
+  opacity: 0.75;
+  text-decoration: line-through;
+}
+
+.due-date {
+  color: #60a5fa;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+.delete-btn {
+  margin-left: auto;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  color: #94a3b8;
+}
+
+#clearCompleted {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#taskList li.overdue {
+  border-left: 5px solid #ef4444;
+  background: #431c1c;
+}
